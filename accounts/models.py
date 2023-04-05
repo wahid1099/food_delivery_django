@@ -5,7 +5,7 @@ from django.dispatch import receiver
 # Create your models here.
 
 class UserManager(BaseUserManager):
-    def create_user(self,first_name,last_name,username,email,password=None):
+    def create_user(self,first_name,last_name,username,email,phone_number=None,password=None):
         if not email:
             raise ValueError('User must have an email address')
         if not username:
@@ -14,7 +14,8 @@ class UserManager(BaseUserManager):
             email=self.normalize_email(email),
             username=username,
             first_name=first_name,
-            last_name=last_name
+            last_name=last_name,
+            phone_number=phone_number
         )
         user.set_password(password)
         user.save(using=self._db)

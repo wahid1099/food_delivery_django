@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def registerResturent(request):
-    return render(request, 'RegisterResturent/ResturentRegistration.html')
+    return render(request, 'RegisterResturent/registerRestaurant.html.html')
 
 def register_selectpackage(request):
     return render(request,'RegisterResturent/register-select-package.html')

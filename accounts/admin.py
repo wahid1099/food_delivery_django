@@ -5,7 +5,7 @@ from django.contrib.auth.admin import UserAdmin
 
 
 class CustomUserAdmin(UserAdmin):
-    list_display= ('email','first_name','last_name','username','role','is_active')
+    list_display= ('email','first_name','last_name','username','role','is_active','phone_number')
     list_display_list= ('email','first_name','last_name','username','role','is_active')
     ordering=('-date_joined',)
     filter_horizontal=()

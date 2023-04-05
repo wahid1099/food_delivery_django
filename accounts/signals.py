@@ -20,5 +20,5 @@ def post_save_create_profile_receiver(sender,instance,created,**kwargs):
              print("Profile not exists, but create a new one")
 
 @receiver(pre_save,sender=User)
-def pree_save_create_profile_receiver(sender,instance,created,**kwargs):
+def pre_save_create_profile_reciver(sender,instance,**kwargs):
     print(instance.username,"This user is being saved")
